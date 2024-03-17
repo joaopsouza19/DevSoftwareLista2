@@ -1,16 +1,11 @@
-import java.util.Scanner;
-
 public class Exercicio01 {
 
     public static void executar() {
-        Scanner scanner = new Scanner(System.in);
-
         double[] numeros = new double[5];
 
-        System.out.println("Digite 5 números:");
+        Prompt.imprimir("Digite 5 números:");
         for (int i = 0; i < numeros.length; i++) {
-            System.out.print("Número " + (i + 1) + ": ");
-            numeros[i] = scanner.nextDouble();
+            numeros[i] = Prompt.lerDecimal("Número " + (i + 1) + ": ");
         }
 
         double soma = 0;
@@ -19,27 +14,25 @@ public class Exercicio01 {
         }
         double media = soma / numeros.length;
 
-        System.out.println("\nMédia: " + media);
-        System.out.println("Valores menores que a média:");
+        Prompt.linhaEmBranco();
+        Prompt.imprimir("Média: " + media);
+        Prompt.imprimir("Valores menores que a média:");
         for (double numero : numeros) {
             if (numero < media) {
-                System.out.println(numero);
+                Prompt.imprimir(numero);
             }
         }
-        System.out.println("Valores iguais à média:");
+        Prompt.imprimir("Valores iguais à média:");
         for (double numero : numeros) {
             if (numero == media) {
-                System.out.println(numero);
+                Prompt.imprimir(numero);
             }
         }
-        System.out.println("Valores superiores à média:");
+        Prompt.imprimir("Valores superiores à média:");
         for (double numero : numeros) {
             if (numero > media) {
-                System.out.println(numero);
+                Prompt.imprimir(numero);
             }
         }
-
-        scanner.close();
-
     }
 }
