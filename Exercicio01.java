@@ -38,5 +38,8 @@ public class Exercicio01 {
                 System.out.println(numero);
             }
         }
+
+        scanner.close();
+
     }
 }

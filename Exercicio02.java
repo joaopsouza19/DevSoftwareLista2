@@ -24,5 +24,7 @@ public class Exercicio02 {
                 System.out.println("Número " + vetor[i] + " na posição " + i + " é zero");
             }
         }
+
+        scanner.close();
     }
 }
