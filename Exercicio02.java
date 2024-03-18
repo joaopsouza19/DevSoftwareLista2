@@ -1,13 +1,13 @@
 public class Exercicio02 {
     public static void executar() {
-        System.out.print("Digite o tamanho do vetor: ");
+        Prompt.imprimir("Digite o tamanho do vetor: ");
         int tamanho = Prompt.lerInteiro();
 
         int[] vetor = new int[tamanho];
 
-        System.out.println("Digite os números do vetor:");
+        Prompt.imprimir("Digite os números do vetor:");
         for (int i = 0; i < vetor.length; i++) {
-            System.out.print("Número " + (i + 1) + ": ");
+            Prompt.imprimir("Número " + (i + 1) + ": ");
             vetor[i] = Prompt.lerInteiro();
         }
 
